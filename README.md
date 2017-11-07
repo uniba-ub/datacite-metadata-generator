@@ -9,7 +9,7 @@
 
 This fork of [DataCite Metadata Generator](https://github.com/mpaluch/datacite-metadata-generator) enhances the basic functionality of creating DataCite Metadata Kernel 4.0 XML via forms by automatically fetching and parsing XML data of your [BIB-OPUS-Publikationsserver](https://opus4.kobv.de/opus4-bib-info/solrsearch/browse).
 
-![](screenshot.png)
+![](https://raw.githubusercontent.com/uniba-ub/datacite-metadata-generator-for-opus/master/screenshot.png)
 
 **NOTE: In the current state DMGO does only work with Bamberg's specific XSLT when exporting data from OPUS. For the future we plan to make DMGO more flexible to allow other facilities to use DMGO with their own OPUS publication server and their own requirements.**
 
