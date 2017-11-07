@@ -1,0 +1,10 @@
+version: '3.3'
+
+services:
+  datacite:
+    build:
+      context: .
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/var/www/html

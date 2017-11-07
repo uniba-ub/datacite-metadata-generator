@@ -3,12 +3,16 @@ $(document).ready(function() {
   var kernelNamespace = "http://datacite.org/schema/kernel-4";
   var kernelSchema = "http://schema.datacite.org/meta/kernel-4/metadata.xsd";
   var kernelSchemaLocation = kernelNamespace + " " + kernelSchema;
-  var header = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" + br() + "<resource xmlns=\"" + kernelNamespace + "\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"" + kernelSchemaLocation + "\">" + br();
+    var header = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" + br() + "<resource xmlns=\"" + kernelNamespace + "\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"" + kernelSchemaLocation + "\" " +
+    //==== Bamberg's Extension ====
+"xmlns:jats=\"http://www.ncbi.nlm.nih.gov/JATS1\" xmlns:ai=\"http://www.crossref.org/AccessIndicators.xsd\""
+    //=============================
+        + ">" + br();
   $("select[title]").each(function(){
 	 var tagName = name($(this));
 	 ps($(this),optionValues[tagName]);
   });
-  $("body").on("keyup", "input", function(event) {
+  $("body").on("keyup", "input:not([noautoprocess])", function(event) {
     event.preventDefault();
     var xml = header;
     $("div.section").each(function(){
@@ -277,19 +281,21 @@ var downloadFile = function() {
     $("span#output").html("");
   }
   var bb = new Blob([metadata], {type:MIME_TYPE});
-  var a = document.createElement("a");
-  a.download = "metadata.xml";
-  a.href = window.URL.createObjectURL(bb);
-  a.textContent = "Click here to Save: metadata.xml";
-  a.setAttribute("data-downloadurl", [MIME_TYPE, a.download, a.href].join(":"));
-  a.classList.add("button");
-  a.onclick = function(e) {
-    if ($(this).is(":disabled")) {
-      return false;
-    }
-    cleanUp(this);
-  };
+  if (navigator.msSaveBlob) {
+    navigator.msSaveBlob(bb, filename)
+  } else {
+    var a = document.createElement("a");
+    a.download = filename;
+    a.href = window.URL.createObjectURL(bb);
+    a.onclick = function(e) {
+      if ($(this).is(":disabled")) {
+        return false;
+      }
+      cleanUp(this);
+    };
+  }
   $(a).appendTo($("span#output"));
+  $(a)[0].click()
 };
 
 function save() {

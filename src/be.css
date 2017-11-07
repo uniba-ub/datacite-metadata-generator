@@ -1,0 +1,42 @@
+#be-header {
+    background-image: linear-gradient(orange, #FF7400);
+    cursor: pointer;
+}
+
+#be-footer {
+    background-color: lightgrey;
+}
+
+#be-error {
+    color: red;
+    font-weight: bold;
+}
+
+#be-help {
+    font-size: 9pt;
+    background-color: white;
+    position: absolute;
+    width: 500px;
+    box-shadow: 5px 5px 5px #888888;
+}
+
+.validationResult {
+    font-size: 10pt;
+    padding: 5px;
+}
+
+.validationResultField {
+    text-align: left;
+    font-size: 10pt;
+    padding: 2px;
+}
+
+.be-tag-label {
+    float: left;
+    margin-top: 2px;
+    width: 80%
+}
+
+.clear {
+    clear: both;
+}

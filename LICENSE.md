@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) 2016 Marcin Paluch
+Copyright (c) 2016 Marcin Paluch, 2017 University Library of Bamberg, Cornelius Matějka
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
