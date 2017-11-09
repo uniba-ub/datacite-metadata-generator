@@ -10,7 +10,7 @@ This fork of [DataCite Metadata Generator](https://github.com/mpaluch/datacite-m
 
 ![](https://raw.githubusercontent.com/uniba-ub/datacite-metadata-generator-for-opus/master/screenshot.png)
 
-**NOTE: In the current state DMGO does only work with Bamberg's specific XSLT when exporting data from OPUS.**
+**NOTE: In the current state DMGO does only work with [Bamberg's specific XSLT](https://github.com/uniba-ub/datacite-metadata-generator-for-opus/blob/master/bamberg.xslt) when exporting data from OPUS.**
 
 
 # How To Use With Docker:
