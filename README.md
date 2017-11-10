@@ -41,3 +41,5 @@ DMGO is now accessible under http://localhost/datacite_metadata_generator.html.
 **Requesites:** customize the configuration section in `src/be.js`
 
 Copy `datacite_metadata_generator.html` and the `src/` directory to your web server.
+
+Created by r3r57
