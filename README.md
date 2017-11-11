@@ -1,10 +1,9 @@
 **Fork of [DataCite Metadata Generator - Kernel 4.0](https://github.com/mpaluch/datacite-metadata-generator)**
 
 # DataCite Metadata Generator for OPUS (DMGO)
-on [GitHub](https://github.com/uniba-ub/datacite-metadata-generator-for-opus) [![GitHub tag](https://img.shields.io/github/tag/datacite-metadata-generator-for-opus/datacite-metadata-generator-for-opus.svg)](https://github.com/uniba-ub/datacite-metadata-generator-for-opus) [![GitHub license](https://img.shields.io/github/license/uniba-ub/datacite-metadata-generator-for-opus.svg)](https://github.com/uniba-ub/datacite-metadata-generator-for-opus/blob/master/LICENSE.md)
+on [GitHub](https://github.com/uniba-ub/datacite-metadata-generator-for-opus) [![GitHub license](https://img.shields.io/github/license/uniba-ub/datacite-metadata-generator-for-opus.svg)](https://github.com/uniba-ub/datacite-metadata-generator-for-opus/blob/master/LICENSE.md)
 
 on [Docker Hub](https://hub.docker.com/r/unibaub/datacite-metadata-generator-for-opus) ![docker](https://img.shields.io/docker/stars/unibaub/datacite-metadata-generator-for-opus.svg) ![docker](https://img.shields.io/docker/pulls/unibaub/datacite-metadata-generator-for-opus.svg) ![docker](https://img.shields.io/docker/automated/unibaub/datacite-metadata-generator-for-opus.svg)
-![docker](https://img.shields.io/docker/build/unibaub/datacite-metadata-generator-for-opus.svg)
 
 This fork of [DataCite Metadata Generator](https://github.com/mpaluch/datacite-metadata-generator) enhances the basic functionality of creating DataCite Metadata Kernel 4.0 XML via forms by automatically fetching and parsing XML data of your [OPUS-Publikationsserver](http://www.kobv.de/entwicklung/software/opus-4/).
 
@@ -41,5 +40,3 @@ DMGO is now accessible under http://localhost/datacite_metadata_generator.html.
 **Requesites:** customize the configuration section in `src/be.js`
 
 Copy `datacite_metadata_generator.html` and the `src/` directory to your web server.
-
-Created by r3r57
