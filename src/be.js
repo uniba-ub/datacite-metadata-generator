@@ -231,7 +231,7 @@ function parseOpusXml(xml) {
         var title = doc_node.find('TitleMain[language=' + language + ']').attr('Value') ? doc_node.find('TitleMain[language=' + language + ']').attr('Value').trim() : ""
         var $creatorNames = doc_node.find('PersonAuthor')
         var resourceType = opus_document_node.attr('Type') ? opus_document_node.attr('Type').trim() : ""
-        var publicationYear = opus_document_node.attr('PublishedYear') ? opus_document_node.attr('PublishedYear') : (opus_document_node.attr('CompletedYear') ? opus_document_node.attr('CompletedYear') : "")
+        var publicationYear = opus_document_node.attr('CompletedYear') ? opus_document_node.attr('CompletedYear') : (opus_document_node.attr('PublishedYear') ? opus_document_node.attr('PublishedYear') : "")
         var $relatedIdentifiers = $xml.find('Identifier')
 
         log("Attributes found:" +
